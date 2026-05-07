@@ -66,7 +66,16 @@ export const workshop = defineType({
       name: 'endDate',
       type: 'datetime',
       validation: (r) =>
-        r.required().min(r.valueOfField('startDate')).error('End date must be after start date'),
+        r.required().custom((endDate, ctx) => {
+          const start = (ctx.document as Record<string, unknown> | undefined)?.startDate as
+            | string
+            | undefined
+          if (!start || !endDate) return true
+          return (
+            new Date(endDate as string) >= new Date(start) ||
+            'End date must be on or after start date'
+          )
+        }),
     }),
     defineField({
       name: 'location',

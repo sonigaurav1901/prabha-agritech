@@ -67,6 +67,8 @@ export const post = defineType({
             defineField({ name: 'caption', type: 'string' }),
           ],
         },
+        { type: 'youtube' },
+        { type: 'callout' },
       ],
       validation: (r) => r.required(),
     }),
