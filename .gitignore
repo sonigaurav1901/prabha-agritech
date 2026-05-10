@@ -39,3 +39,6 @@ Thumbs.db
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Visual brainstorming session artifacts (local only)
+.superpowers/
