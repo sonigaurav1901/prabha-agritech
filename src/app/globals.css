@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700;900&display=swap');
+
+:root {
+  --font-playfair: 'Playfair Display';
+  --font-dm-sans: 'DM Sans';
+  --font-space-grotesk: 'Space Grotesk';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1B4332;
+  color: #FAF7F0;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
